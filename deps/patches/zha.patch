@@ -1,0 +1,50 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index 4d0ebe6..5f03bc2 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
+ 
+ [project]
+ name = "zha"
+-dynamic = ["version"]
+-description = "Library implementing ZHA for Home Assistant"
++version = "0.0.62"
++description = "Library implementing ZHA for Home Assistant with ESP32 ZNCP"
+ urls = {repository = "https://github.com/zigpy/zha"}
+ authors = [
+     {name = "David F. Mulcahey", email = "david.mulcahey@icloud.com"}
+diff --git a/tests/test_gateway.py b/tests/test_gateway.py
+index f4c3984..c305c8c 100644
+--- a/tests/test_gateway.py
++++ b/tests/test_gateway.py
+@@ -791,6 +791,7 @@ def test_radio_type():
+         "deCONZ = dresden elektronik deCONZ protocol: ConBee I/II, RaspBee I/II",
+         "ZiGate = ZiGate Zigbee radios: PiZiGate, ZiGate USB-TTL, ZiGate WiFi",
+         "XBee = Digi XBee Zigbee radios: Digi XBee Series 2, 2C, 3",
++        "ZNSP = Espressif Zigbee NCP Serial Protocol (ESP ZNSP)",
+     ]
+ 
+     assert (
+diff --git a/zha/application/const.py b/zha/application/const.py
+index 08c857a..44c02d4 100644
+--- a/zha/application/const.py
++++ b/zha/application/const.py
+@@ -12,6 +12,7 @@ import zigpy_deconz.zigbee.application
+ import zigpy_xbee.zigbee.application
+ import zigpy_zigate.zigbee.application
+ import zigpy_znp.zigbee.application
++import zigpy_espzb.zigbee.application
+ 
+ ATTR_ACTIVE_COORDINATOR = "active_coordinator"
+ ATTR_ARGS = "args"
+@@ -122,6 +123,10 @@ class RadioType(enum.Enum):
+         "XBee = Digi XBee Zigbee radios: Digi XBee Series 2, 2C, 3",
+         zigpy_xbee.zigbee.application.ControllerApplication,
+     )
++    znsp = (
++        "ZNSP = Espressif Zigbee NCP Serial Protocol (ESP ZNSP)",
++        zigpy_espzb.zigbee.application.ControllerApplication,
++    )
+ 
+     @classmethod
+     def list(cls) -> list[str]:

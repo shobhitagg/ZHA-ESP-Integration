@@ -1,0 +1,6 @@
+[submodule "deps/zigpy-espzb"]
+	path = deps/zigpy-espzb
+	url = https://github.com/puddly/zigpy-espzb.git
+[submodule "deps/zha"]
+	path = deps/zha
+	url = https://github.com/zigpy/zha.git

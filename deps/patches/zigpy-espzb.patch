@@ -1,0 +1,63 @@
+diff --git a/zigpy_espzb/types.py b/zigpy_espzb/types.py
+index dc6b229..fdbd714 100644
+--- a/zigpy_espzb/types.py
++++ b/zigpy_espzb/types.py
+@@ -1,9 +1,11 @@
+ """Data types module."""
+ 
+ from __future__ import annotations
++import logging
+ 
+ import zigpy.types as t
+ 
++LOGGER = logging.getLogger(__name__)
+ 
+ class Bytes(bytes):
+     def serialize(self):
+@@ -53,16 +55,18 @@ class ExtendedAddrMode(t.enum8):
+ 
+     def to_zigpy_addr_mode(self) -> t.AddrMode:
+         """Convert a Zigpy AddrMode to an ExtendedAddrMode."""
+-        return {
++        map_values = {
+             self.MODE_64_ENDP_PRESENT: t.AddrMode.IEEE,
+             self.MODE_16_ENDP_PRESENT: t.AddrMode.NWK,
+             self.MODE_DST_ADDR_ENDP_NOT_PRESENT: t.AddrMode.NWK,
+             self.MODE_16_GROUP_ENDP_NOT_PRESENT: t.AddrMode.Group,
+-            self.MODE_16_GROUP_ENDP_NOT_PRESENT: t.AddrMode.Broadcast,
+-            # TODO: why is this necessary?
+-            0xFF: t.AddrMode.NWK,
+-        }[self]
+-
++            self.MODE_16_GROUP_ENDP_NOT_PRESENT: t.AddrMode.Broadcast
++        }
++        if self not in map_values:
++            LOGGER.warning(
++                "Unknown ExtendedAddrMode %s, defaulting to NWK AddrMode", self
++            )
++        return map_values.get(self, t.AddrMode.NWK)
+ 
+ def addr_mode_with_eui64_to_addr_mode_address(
+     addr_mode: ExtendedAddrMode, address: t.EUI64
+@@ -136,7 +140,7 @@ class Status(t.enum8):
+     BUSY = 7
+ 
+ 
+-class FirmwareVersion(t.Struct, t.uint32_t):
++class FirmwareVersion(t.IntStruct, t.uint32_t):
+     reserved: t.uint8_t
+     patch: t.uint8_t
+     minor: t.uint8_t
+diff --git a/zigpy_espzb/zigbee/application.py b/zigpy_espzb/zigbee/application.py
+index 352d896..a1763b0 100644
+--- a/zigpy_espzb/zigbee/application.py
++++ b/zigpy_espzb/zigbee/application.py
+@@ -55,7 +55,7 @@ class ControllerApplication(zigpy.application.ControllerApplication):
+         super().__init__(config=config)
+         self._api = None
+ 
+-        self._pending = zigpy.util.Requests()
++        # self._pending = zigpy.util.Requests()
+         self._reconnect_task = None
+ 
+     async def _watchdog_feed(self):

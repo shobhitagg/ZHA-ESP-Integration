@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:144.0) Gecko/20100101 Firefox/144.0" version="29.0.3">
+  <diagram name="Page-1" id="n78eiPsm2GH_ZY-ahtza">
+    <mxGraphModel dx="787" dy="621" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="efD6nmWkpO6erhULapDv-25" value="Home Assistant Zigbee Home Automation (ZHA) Integration" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;verticalAlign=top;fontStyle=1;fontFamily=Source Sans Pro;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DSource%2BSans%2BPro;" vertex="1" parent="1">
+          <mxGeometry x="100" y="220" width="480" height="500" as="geometry" />
+        </mxCell>
+        <mxCell id="efD6nmWkpO6erhULapDv-12" value="zigpy Python Libraries" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;verticalAlign=top;dashed=1;fontStyle=1;fontFamily=Source Sans Pro;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DSource%2BSans%2BPro;" vertex="1" parent="1">
+          <mxGeometry x="120" y="520" width="440" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="efD6nmWkpO6erhULapDv-6" value="Home Assistant Components" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;verticalAlign=top;dashed=1;fontStyle=1;fontFamily=Source Sans Pro;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DSource%2BSans%2BPro;" vertex="1" parent="1">
+          <mxGeometry x="118" y="260" width="442" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="efD6nmWkpO6erhULapDv-5" value="Python Libraries" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;verticalAlign=top;dashed=1;fontStyle=1;fontFamily=Source Sans Pro;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DSource%2BSans%2BPro;" vertex="1" parent="1">
+          <mxGeometry x="119" y="390" width="440" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="efD6nmWkpO6erhULapDv-1" value="zha" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Source Sans Pro;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DSource%2BSans%2BPro;fillColor=#6d8764;fontColor=#ffffff;strokeColor=#3A5431;fillStyle=auto;" vertex="1" parent="1">
+          <mxGeometry x="254" y="300" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="efD6nmWkpO6erhULapDv-11" value="zigpy_deconz" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Source Sans Pro;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DSource%2BSans%2BPro;" vertex="1" parent="1">
+          <mxGeometry x="140" y="560" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="efD6nmWkpO6erhULapDv-17" value="zigpy_xbee" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Source Sans Pro;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DSource%2BSans%2BPro;" vertex="1" parent="1">
+          <mxGeometry x="140" y="600" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="efD6nmWkpO6erhULapDv-18" value="zigpy_zigate" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Source Sans Pro;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DSource%2BSans%2BPro;" vertex="1" parent="1">
+          <mxGeometry x="280" y="560" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="efD6nmWkpO6erhULapDv-19" value="zigpy_znp" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Source Sans Pro;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DSource%2BSans%2BPro;" vertex="1" parent="1">
+          <mxGeometry x="280" y="600" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="efD6nmWkpO6erhULapDv-20" value="zigpy_espzb" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Source Sans Pro;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DSource%2BSans%2BPro;fillColor=#6d8764;fontColor=#ffffff;strokeColor=#3A5431;fillStyle=auto;" vertex="1" parent="1">
+          <mxGeometry x="420" y="560" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="efD6nmWkpO6erhULapDv-4" value="zha" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Source Sans Pro;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DSource%2BSans%2BPro;fillColor=#6d8764;fontColor=#ffffff;strokeColor=#3A5431;fillStyle=auto;" vertex="1" parent="1">
+          <mxGeometry x="210" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="efD6nmWkpO6erhULapDv-8" value="zigpy" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Source Sans Pro;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DSource%2BSans%2BPro;" vertex="1" parent="1">
+          <mxGeometry x="350" y="430" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="efD6nmWkpO6erhULapDv-24" value="Connected Hardware" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;verticalAlign=middle;dashed=1;fontStyle=1;fontFamily=Source Sans Pro;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DSource%2BSans%2BPro;" vertex="1" parent="1">
+          <mxGeometry x="119" y="660" width="440" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
